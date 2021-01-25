@@ -3,6 +3,9 @@ on: push
 jobs:
   prod-check:
     if: github.ref == 'refs/heads/main'
-    runs-on: macos-latest
+    runs-on: macos-11.0
     steps:
-      - run: echo "Deploying to production server on branch $GITHUB_REF"
+      - run: |
+          ruby -v
+          gem -v
+          brew --version
