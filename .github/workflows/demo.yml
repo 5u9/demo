@@ -3,7 +3,7 @@ on: push
 jobs:
   prod-check:
     if: github.ref == 'refs/heads/main'
-    runs-on: macos-11.0
+    runs-on: macos-latest
     steps:
       - run: |
           ruby -v
